@@ -2,7 +2,7 @@
 
 # 🚀 Aegis Cognitive Mesh (ACM)
 
-Live demo : visit website : https://aegis-cognitive-mesh-m3ewstsrqoz6wkvfxjaegc.streamlit.app/
+Live demo : visit website :(https://cognitivemesh.streamlit.app/)
 
 **Azure-native, secure, AI decision fabric — “prove-then-execute.”**
 
