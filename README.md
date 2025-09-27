@@ -1,0 +1,2 @@
+# Aegis-Cognitive-Mesh---End-to-End-Confidential-AI-Decision-Fabric-
+a confidential AI decision fabric on Microsoft Azure, leveraging Microsoft Azure Confidential Containers, Microsoft Azure Attestation, Microsoft Azure Key Vault Secure Key Release, and Microsoft Azure Digital Twins. Designed a prove-then-execute workflow where actions are executed only after attestation claims and policy hashes are verified . 
