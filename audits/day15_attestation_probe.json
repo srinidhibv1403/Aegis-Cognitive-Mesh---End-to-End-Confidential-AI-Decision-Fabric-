@@ -1,0 +1,20 @@
+{
+  "attestor": "https://acmattest9427.cin.attest.azure.net",
+  "issuer": "https://acmattest9427.cin.attest.azure.net",
+  "jwks_keys": 3,
+  "claims": {
+    "iss": "https://acmattest9427.cin.attest.azure.net",
+    "iat": 1755426084,
+    "exp": 1755429684,
+    "x-ms-attestation-type": "simulated",
+    "x-ms-policy-hash": null,
+    "measurement": {
+      "mrenclave": null,
+      "mrsigner": null
+    },
+    "result": "probed-metadata-ok"
+  },
+  "issuedAt": "2025-08-17T10:21:24+00:00Z",
+  "expiresAt": "2025-08-17T11:21:24+00:00Z",
+  "signingKeyThumbprint": null
+}

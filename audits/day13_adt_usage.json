@@ -1,0 +1,11 @@
+{
+  "ts": "2025-08-17T08:25:06.366615+00:00",
+  "attempted": false,
+  "adt_instance": "unset",
+  "ops": 0,
+  "messages": 0,
+  "query_units": 0,
+  "notes": [
+    "RUN_ADT_TOUCH is false; skipping ADT calls."
+  ]
+}

@@ -1,0 +1,2 @@
+[2025-08-17 17:29:31] {"audit": {"attestation_type": "simulated"}}
+[2025-08-17 17:29:31] {"secret_name": "acm-demo-ephemeral", "released": true, "value": "hello-acm"}

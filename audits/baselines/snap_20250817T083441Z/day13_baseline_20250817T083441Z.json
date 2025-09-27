@@ -1,0 +1,14 @@
+{
+  "ts": "20250817T083441Z",
+  "event_file": "fd5d10e0fd486ff2.json",
+  "plan_bundle": "d880f09222473657.json",
+  "sim_file": "d880f09222473657_sim.json",
+  "chain_head": "1f3e9a2175810a5ea884719df0595917a7b504a340f82f074ce5ce7acf00af0e",
+  "adt_attempted": false,
+  "adt_ops": 0,
+  "adt_messages": 0,
+  "adt_query_units": 0,
+  "notes": [
+    "RUN_ADT_TOUCH is false; skipping ADT calls."
+  ]
+}

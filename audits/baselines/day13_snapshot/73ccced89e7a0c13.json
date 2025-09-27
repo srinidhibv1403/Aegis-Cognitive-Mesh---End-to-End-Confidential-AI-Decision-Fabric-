@@ -1,0 +1,8 @@
+{
+  "type": "route_outage",
+  "route_id": "R7",
+  "warehouse_id": "W3",
+  "source": "day13-seed",
+  "severity": "high",
+  "ts": "2025-08-17T08:18:11.841956Z"
+}

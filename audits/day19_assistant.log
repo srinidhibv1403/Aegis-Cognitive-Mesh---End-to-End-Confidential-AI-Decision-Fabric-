@@ -1,0 +1,2 @@
+{"timestamp": "2025-08-17 19:33:30", "mode": "local-stub", "input": "how do we prove-then-execute?", "output": "Assistant (local) is active. No cloud calls were made."}
+{"timestamp": "2025-08-17 19:34:26", "mode": "local-stub", "input": "policy and z3 checks?", "output": "Policy check: compute policy hash, verify SAT/UNSAT; show counterexample if UNSAT."}

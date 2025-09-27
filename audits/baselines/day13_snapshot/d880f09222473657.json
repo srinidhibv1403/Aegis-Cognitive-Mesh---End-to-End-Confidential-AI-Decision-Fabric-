@@ -1,0 +1,54 @@
+{
+  "event": {
+    "type": "route_outage",
+    "route_id": "R7",
+    "warehouse_id": "W3",
+    "source": "day13-seed",
+    "severity": "high",
+    "ts": "2025-08-17T08:31:40.541149Z"
+  },
+  "plans": [
+    {
+      "id": "PlanA",
+      "strategy": "reroute_via_R7",
+      "assumptions": {
+        "carrier_capacity_buffer_pct": 10
+      },
+      "cost_usd": 4800,
+      "sla_expected_percent": 97.5,
+      "region_data_boundary": "EU",
+      "pii_access": false,
+      "kpi_expectations": {
+        "stockout_risk_reduction_pct": 22,
+        "delay_reduction_pct": 18
+      },
+      "inputs": {
+        "route_id": "R7",
+        "warehouse_id": "W3"
+      },
+      "ts": "2025-08-17T08:31:40.593995"
+    },
+    {
+      "id": "PlanB",
+      "strategy": "reallocate_inventory_and_surge_carrier",
+      "assumptions": {
+        "temp_staff_hours": 12
+      },
+      "cost_usd": 6400,
+      "sla_expected_percent": 98.2,
+      "region_data_boundary": "EU",
+      "pii_access": false,
+      "kpi_expectations": {
+        "stockout_risk_reduction_pct": 42,
+        "delay_reduction_pct": 31
+      },
+      "inputs": {
+        "route_id": "R7",
+        "warehouse_id": "W3"
+      },
+      "ts": "2025-08-17T08:31:40.594001"
+    }
+  ],
+  "origin_event_file": "fd5d10e0fd486ff2.json",
+  "generated_at": "2025-08-17T08:31:40.594006"
+}

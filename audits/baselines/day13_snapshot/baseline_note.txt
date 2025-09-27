@@ -1,0 +1,1 @@
+Day 13 baseline: seeded route_outage, generated plan, verified policies, simulated twin deltas, wrote proof, ADT touch snapshot.
