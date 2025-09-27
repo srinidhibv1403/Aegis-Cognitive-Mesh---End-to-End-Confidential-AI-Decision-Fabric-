@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# 1) Validate policy before hashing
+if [ -x "scripts/validate_policy.py" ]; then
+  python3 scripts/validate_policy.py
+fi
+
+# 2) Run the policy lock check
+if [ -x ".githooks/policy-lock-check.sh" ]; then
+  .githooks/policy-lock-check.sh
+fi
