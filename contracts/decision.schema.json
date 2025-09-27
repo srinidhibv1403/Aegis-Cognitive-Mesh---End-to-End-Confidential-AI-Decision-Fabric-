@@ -1,0 +1,34 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"title": "ACM Decision",
+"type": "object",
+"required": ["plan_id", "verdict", "policy_hash", "checks", "sim_deltas"],
+"properties": {
+"plan_id": { "type": "string" },
+"verdict": { "type": "string", "enum": ["approve", "reject"] },
+"policy_hash": { "type": "string" },
+"checks": {
+"type": "object",
+"required": ["budget_ok", "jurisdiction_ok", "sla_ok", "pii_ok"],
+"properties": {
+"budget_ok": { "type": "boolean" },
+"jurisdiction_ok": { "type": "boolean" },
+"sla_ok": { "type": "boolean" },
+"pii_ok": { "type": "boolean" },
+"explanation": { "type": "string" }
+},
+"additionalProperties": false
+},
+"sim_deltas": {
+"type": "object",
+"required": ["stockout_risk_delta", "on_time_delta_pct", "cost_delta"],
+"properties": {
+"stockout_risk_delta": { "type": "number" },
+"on_time_delta_pct": { "type": "number" },
+"cost_delta": { "type": "number" }
+},
+"additionalProperties": false
+}
+},
+"additionalProperties": false
+}

@@ -1,0 +1,10 @@
+{
+  "warehouses": {
+    "W1": {"inventory": 50, "demand": 100},
+    "W2": {"inventory": 80, "demand": 120}
+  },
+  "routes": {
+    "R1": {"latency_minutes": 40},
+    "R2": {"latency_minutes": 30}
+  }
+}

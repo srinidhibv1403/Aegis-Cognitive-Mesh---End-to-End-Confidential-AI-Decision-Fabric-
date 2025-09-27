@@ -1,0 +1,10 @@
+{
+"plan_id": "PlanA",
+"cost_usd": 6400,
+"sla_pct": 97,
+"latency_ms": 420,
+"region": "EU",
+"endpoint": "private",
+"stockout_risk": 0.28,
+"delay_minutes": 30
+}

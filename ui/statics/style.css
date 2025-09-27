@@ -1,0 +1,10 @@
+/* ui/static/style.css */
+:root { color-scheme: light dark; }
+@media (prefers-color-scheme: dark) {
+  body { background: #0b0d10; color: #e6e6e6; }
+  table { color: inherit; }
+}
+table code { 
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; 
+  font-size: 0.9em; 
+}

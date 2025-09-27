@@ -1,0 +1,39 @@
+{
+  "origin_bundle": "53faa72b3affd211.json",
+  "event_type": "route_outage",
+  "route_id": "R7",
+  "warehouse_id": "W3",
+  "results": [
+    {
+      "plan_id": "PlanA",
+      "strategy": "reroute_via_R7",
+      "inputs": {
+        "route_id": "R7",
+        "warehouse_id": "W3"
+      },
+      "simulated": {
+        "stockout_risk_reduction_pct": 22,
+        "delay_reduction_pct": 18,
+        "cost_usd": 4800,
+        "sla_expected_percent": 97.5
+      },
+      "ts": "2025-08-17T08:21:23.351014Z"
+    },
+    {
+      "plan_id": "PlanB",
+      "strategy": "reallocate_inventory_and_surge_carrier",
+      "inputs": {
+        "route_id": "R7",
+        "warehouse_id": "W3"
+      },
+      "simulated": {
+        "stockout_risk_reduction_pct": 42,
+        "delay_reduction_pct": 31,
+        "cost_usd": 6400,
+        "sla_expected_percent": 98.2
+      },
+      "ts": "2025-08-17T08:21:23.351028Z"
+    }
+  ],
+  "generated_at": "2025-08-17T08:21:23.351118Z"
+}

@@ -1,0 +1,17 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"title": "ACM Proposal",
+"type": "object",
+"required": ["plan_id", "origin", "warehouse", "route", "cost_delta", "risk", "delay_minutes"],
+"properties": {
+"plan_id": { "type": "string" },
+"origin": { "type": "string", "enum": ["node-1", "node-2", "node-3"] },
+"warehouse": { "type": "string" },
+"route": { "type": "string" },
+"cost_delta": { "type": "number" },
+"risk": { "type": "number", "minimum": 0, "maximum": 1 },
+"delay_minutes": { "type": "integer", "minimum": 0 },
+"notes": { "type": "string" }
+},
+"additionalProperties": false
+}

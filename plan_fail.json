@@ -1,0 +1,10 @@
+{
+"plan_id": "PlanB",
+"cost_usd": 13000,
+"sla_pct": 94,
+"latency_ms": 620,
+"region": "US",
+"endpoint": "public",
+"stockout_risk": 0.50,
+"delay_minutes": 60
+}

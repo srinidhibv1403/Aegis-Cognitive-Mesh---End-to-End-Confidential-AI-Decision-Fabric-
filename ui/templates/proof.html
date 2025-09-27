@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ACM Proof Viewer</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 10px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f2f2f2; }
+    .released { color: green; font-weight: bold; }
+    .denied { color: red; font-weight: bold; }
+    .neutral { color: #777; }
+    .controls { margin-top: 20px; }
+    button { margin-right: 10px; padding: 6px 12px; }
+  </style>
+</head>
+<body>
+  <h1>Aegis Cognitive Mesh — Proof Viewer</h1>
+  <p>Generated: {{ generated }} — Showing {{ count }} latest entries</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Attestation</th>
+        <th>Policy Hash</th>
+        <th>Verdict</th>
+        <th>Released</th>
+        <th>Secret</th>
+        <th>Token Digest</th>
+        <th>ADT Usage</th> <!-- ✅ new column -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r.timestamp }}</td>
+        <td>{{ r.attestation_type }}</td>
+        <td>{{ r.policy_hash }}</td>
+        <td>{{ r.verdict }}</td>
+        <td>
+          {% if r.released is sameas true %}
+            <span class="released">Released</span>
+          {% elif r.released is sameas false %}
+            <span class="denied">Denied</span>
+          {% else %}
+            <span class="neutral">—</span>
+          {% endif %}
+        </td>
+        <td>{{ r.secret_name }}</td>
+        <td>{{ r.token_digest }}</td>
+        <td>{{ r.adt_usage }}</td> <!-- ✅ new field -->
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="controls">
+    <button onclick="window.location.href='/api/audit'">View JSON</button>
+    <button onclick="location.reload()">Refresh</button>
+    <button id="latestBtn">Latest only</button>
+    <label style="margin-left:15px;">
+      <input type="checkbox" id="autoRefreshToggle"> Auto-refresh
+    </label>
+  </div>
+
+  <script>
+    // Auto-refresh toggle
+    (function () {
+      const toggle = document.getElementById('autoRefreshToggle');
+      if (!toggle) return;
+      let interval;
+      toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+          interval = setInterval(() => location.reload(), 5000);
+        } else {
+          clearInterval(interval);
+        }
+      });
+    })();
+
+    // Latest-only filter
+    (function () {
+      const latest = document.getElementById('latestBtn');
+      if (!latest) return;
+      latest.addEventListener('click', () => {
+        const url = new URL(window.location.href);
+        url.searchParams.set('n', '1');
+        window.location.replace(url.toString());
+      });
+    })();
+  </script>
+</body>
+</html>

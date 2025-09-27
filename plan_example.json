@@ -1,0 +1,6 @@
+{
+  "plan_id": "PlanB",
+  "cost_usd": 6400,
+  "stockout_risk": 0.2,
+  "delay_minutes": 30.0
+}
