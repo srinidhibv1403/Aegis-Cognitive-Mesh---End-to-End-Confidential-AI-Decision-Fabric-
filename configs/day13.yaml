@@ -1,0 +1,23 @@
+disruption: route_outage
+route_id: R7
+warehouse_id: W3
+
+plans:
+  - A: reroute_via_R7
+  - B: reallocate_inventory_and_surge_carrier
+
+policy_version: v1.0.0
+budget_cap_usd: 10000
+sla_min_percent: 96
+region_data_boundary: EU
+
+adt:
+  queries:
+    - "MATCH (w)-[:ROUTE]->(r) WHERE w.warehouseId = 'W3' RETURN w, r LIMIT 5"
+  updates_batched: true
+  max_ops: 5
+  max_qu: 2
+
+audit:
+  output_file: audits/day13_proof.jsonl
+  chain_file: audits/chain.meta

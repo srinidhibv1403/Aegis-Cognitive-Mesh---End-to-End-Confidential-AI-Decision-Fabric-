@@ -1,0 +1,16 @@
+{
+  "anyOf": [
+    {
+      "allOf": [
+        {
+          "claim": "iss",
+          "equals": "https://acmattest9427.cin.attest.azure.net"
+        },
+        {
+          "claim": "x-ms-attestation-type",
+          "equals": "simulated"
+        }
+      ]
+    }
+  ]
+}

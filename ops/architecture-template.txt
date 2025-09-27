@@ -1,0 +1,43 @@
+System boxes (draw these as rectangles in any diagram tool later):
+
+UI (web dashboard)
+
+Hub API (decision orchestrator)
+
+Node (proposal generator) — start with 1
+
+Storage (ADLS Gen2) — synthetic data files
+
+Digital Twin (ADT) — 5 warehouses, up to 12 routes
+
+Key Vault — secrets
+
+Attestation (MAA) — proves secure environment
+
+Arrows (who talks to whom):
+
+UI → Hub API: “show proposals, approve plan”
+
+Node → Hub API: “submit plan”
+
+Hub API → Digital Twin: “simulate what-if”
+
+Hub API → Key Vault: “request secret if attested”
+
+Node → Attestation: “get attestation token”
+
+Hub API → Storage: “read inputs / write logs”
+
+Trust notes (keep this text as labels in your diagram):
+
+Prove-then-execute: Attestation token + policy-hash must match before key is released.
+
+Audit: Each decision creates a hash-chained record with token digest, policy hash, Z3 verdict, sim deltas.
+
+Cost notes (stickers on diagram):
+
+Keep ADT small and calls minimal.
+
+Use Container Apps or tiny AKS only during demo windows.
+
+Key Vault standard (no Managed HSM).
